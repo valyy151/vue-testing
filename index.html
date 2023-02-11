@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Project</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div id="app">
+      <div>
+        <h1>{{title}}</h1>
+        <h2>{{author}}, {{age}}</h2>
+        <button @click="age++">Increase Age</button>
+        <button @click="age--">Decrease Age</button>
+        <button @click="switchTitles()">Switch Titles</button>
+      </div>
+    </div>
   </body>
 </html>
