@@ -2,9 +2,28 @@ const app = Vue.createApp({
   data() {
     return {
       firstTitle: true,
-      title: 'The Brothers Karamazov',
-      author: 'Fyodor Dostoyevsky',
-      age: 40,
+      books: [
+        {
+          title: 'The Brothers Karamazov',
+          author: 'Fyodor Dostoyevsky',
+          age: 40,
+        },
+        {
+          title: 'The Power of Now',
+          author: 'Eckhart Tolle',
+          age: 56,
+        },
+        {
+          title: 'Meditations',
+          author: 'Marcus Aurelius',
+          age: 67,
+        },
+        {
+          title: 'The Book of Five Rings',
+          author: 'Miyamoto Musashi',
+          age: 75,
+        },
+      ],
     };
   },
   methods: {

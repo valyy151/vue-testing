@@ -7,15 +7,20 @@
     <title>Vue Project</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
     <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="app">
       <div>
-        <h1>{{title}}</h1>
-        <h2>{{author}}, {{age}}</h2>
+        <ul>
+          <li v-for="book in books">
+            <h3>{{book.title}}</h3>
+            <p>{{book.author}}</p>
+            <span>Age: {{book.age}}</span>
+          </li>
+        </ul>
         <button @click="age++">Increase Age</button>
         <button @click="age--">Decrease Age</button>
-        <button @click="switchTitles()">Switch Titles</button>
       </div>
     </div>
   </body>
